@@ -1,0 +1,35 @@
+{
+  "manifest_version": 2,
+
+  "name": "/r/buildapcsales Notify Me",
+  "description": "This extension notifies user of new posts on /r/buildapcsales",
+  "version": "2.0",
+
+  "permissions": [
+    "activeTab",
+    "tabs",
+    "alarms",
+    "storage",
+    "https://ajax.googleapis.com/",
+    "<all_urls>",
+    "notifications"
+  ],
+
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  },
+
+  "background": {
+    "scripts": [ "background.js"],
+    "persistent": false
+  },
+
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+
+  "web_accessible_resources": [
+    "<all_urls>",
+    "app/*",
+    "scripts/*"
+  ]
+}

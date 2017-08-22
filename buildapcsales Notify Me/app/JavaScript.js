@@ -1,17 +1,14 @@
-﻿document.addEventListener('DOMContentLoaded', function ()
+﻿//Wait for the document(popup.html) to fully load before executing any javascript
+document.addEventListener('DOMContentLoaded', function ()
 {
+    //"Clear all Notifications" logic
     var reload = document.getElementById('Button2');
-
     reload.addEventListener('click', function ()
     {
         chrome.runtime.reload();
         console.log("Extension Reloaded");
     });
-});
 
-//Wait for the document(popup.html) to fully load before executing any javascript
-document.addEventListener('DOMContentLoaded', function ()
-{
     var start = document.getElementById('button1');
     // onClick's logic below:
     start.addEventListener('click', function ()

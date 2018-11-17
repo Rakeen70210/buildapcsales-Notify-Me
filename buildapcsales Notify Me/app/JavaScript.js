@@ -1,25 +1,27 @@
 ﻿//Wait for the document(popup.html) to fully load before executing any javascript
 document.addEventListener('DOMContentLoaded', function () {
     //"Clear all Notifications" logic
-    var reload = document.getElementById('Button2');
-    reload.addEventListener('click', function () {
-        chrome.runtime.reload();
-        console.log("Extension Reloaded");
+    var clear = document.getElementById('Button2');
+    clear.addEventListener('click', function () {
+        chrome.notifications.getAll(function (notifications) {
+            notifications.forEach(function (object) {
+                chrome.notifications.clear(object, function () {
+                    console.log("cleared: " + object);
+                });
+            });
+        });
     });
 
     var start = document.getElementById('button1');
     // onClick's logic below:
     start.addEventListener('click', function () {
-        //Clear any previously stored data
-        chrome.storage.local.clear(function (callback) {
-            //If there was an error clearing local storage.
-            var error = chrome.runtime.lastError;
-            if (error) {
-                console.error(error);
-            }
-            else {
-                console.log("local storage cleared");
-            }
+        //clear storage
+        chrome.storage.local.clear(function () {
+            console.log("storage cleared");
+        });
+        //clear alarms
+        chrome.alarms.clearAll(function () {
+            console.log("alarm cleared");
         });
 
         var categories = document.getElementById("Select1");

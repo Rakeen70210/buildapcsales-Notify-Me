@@ -3,8 +3,9 @@
     "",
     "\\buildapcsales Notify Me",
     "\\buildapcsales Notify Me\\app",
-    "\\buildapcsales Notify Me\\app\\img"
+    "\\buildapcsales Notify Me\\app\\img",
+    "\\buildapcsales Notify Me\\Properties\\build"
   ],
-  "SelectedNode": "\\buildapcsales Notify Me\\app\\manifest.json",
+  "SelectedNode": "\\buildapcsales Notify Me\\app\\popup.html",
   "PreviewInSolutionExplorer": false
 }

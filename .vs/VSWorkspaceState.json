@@ -4,8 +4,12 @@
     "\\buildapcsales Notify Me",
     "\\buildapcsales Notify Me\\app",
     "\\buildapcsales Notify Me\\app\\img",
-    "\\buildapcsales Notify Me\\Properties\\build"
+    "\\buildapcsales Notify Me\\bin",
+    "\\buildapcsales Notify Me\\Properties",
+    "\\buildapcsales Notify Me\\Properties\\build",
+    "\\buildapcsales Notify Me\\Properties\\build\\lib",
+    "\\buildapcsales Notify Me\\scripts"
   ],
-  "SelectedNode": "\\buildapcsales Notify Me\\app\\popup.html",
+  "SelectedNode": "\\buildapcsales Notify Me\\app\\JavaScript.js",
   "PreviewInSolutionExplorer": false
 }

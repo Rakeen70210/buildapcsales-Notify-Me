@@ -455,15 +455,16 @@ function removeQuotes(string) {
 var notificationID = null;
 //creates a notification on the desktop
 function notification(thumbnail, url, title) {
+    //if the 
     if (thumbnail == "self" || thumbnail == "default" || thumbnail == "nsfw" || thumbnail == "image")
     {
         chrome.notifications.create(url, {
             type: "basic",
+            iconUrl: "icon.png",
             title: "",
             message: title,
             iconUrl: "icon.png",
             buttons: [{ title: "/r/buildapcsales", iconUrl: "icon.png" }],
-            isClickable: true,
             requireInteraction: true
         });
     }
@@ -472,14 +473,13 @@ function notification(thumbnail, url, title) {
         var xhr = new XMLHttpRequest();
         xhr.open('GET', thumbnail, true);
         xhr.responseType = 'blob';
-        xhr.onload = function (e) {
+        xhr.onload = function () {
             chrome.notifications.create(url, {
                 type: "basic",
+                iconUrl: window.URL.createObjectURL(this.response),
                 title: "",
                 message: title,
-                iconUrl: window.URL.createObjectURL(this.response),
                 buttons: [{ title: "/r/buildapcsales", iconUrl: "icon.png" }],
-                isClickable: true,
                 requireInteraction: true
             });
         };

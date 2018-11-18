@@ -4,12 +4,8 @@
     "\\buildapcsales Notify Me",
     "\\buildapcsales Notify Me\\app",
     "\\buildapcsales Notify Me\\app\\img",
-    "\\buildapcsales Notify Me\\bin",
-    "\\buildapcsales Notify Me\\Properties",
-    "\\buildapcsales Notify Me\\Properties\\build",
-    "\\buildapcsales Notify Me\\Properties\\build\\lib",
-    "\\buildapcsales Notify Me\\scripts"
+    "\\buildapcsales Notify Me\\Properties\\build"
   ],
-  "SelectedNode": "\\buildapcsales Notify Me\\Properties\\build\\ligershark.chrome.targets",
+  "SelectedNode": "\\buildapcsales Notify Me\\app\\popup.html",
   "PreviewInSolutionExplorer": false
 }

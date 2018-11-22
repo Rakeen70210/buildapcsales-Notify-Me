@@ -465,7 +465,7 @@ function notification(thumbnail, url, title) {
             message: title,
             iconUrl: "icon.png",
             buttons: [{ title: "/r/buildapcsales", iconUrl: "icon.png" }],
-            requireInteraction: true
+            requireInteraction: false
         });
     }
     else
@@ -480,7 +480,7 @@ function notification(thumbnail, url, title) {
                 title: "",
                 message: title,
                 buttons: [{ title: "/r/buildapcsales", iconUrl: "icon.png" }],
-                requireInteraction: true
+                requireInteraction: false
             });
         };
         xhr.send(null);
